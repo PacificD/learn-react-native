@@ -1,0 +1,55 @@
+{
+  "name": "expo-ts-boilerplate",
+  "description": "A TypeScirpt and Expo Template for React Native",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:PacificD/expo-ts-boilerplate.git"
+  },
+  "author": {
+    "name": "PacificD",
+    "url": "https://github.com/PacificD"
+  },
+  "license": "MIT",
+  "keywords": [
+    "react-native",
+    "tutorial",
+    "todo"
+  ],
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "eject": "expo eject"
+  },
+  "dependencies": {
+    "@react-navigation/drawer": "^6.1.8",
+    "@react-navigation/native": "^6.0.6",
+    "expo": "~46.0.9",
+    "expo-linking": "^3.2.2",
+    "expo-status-bar": "~1.4.0",
+    "expo-updates": "~0.14.5",
+    "native-base": "^3.2.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-native": "0.69.5",
+    "react-native-gesture-handler": "^2.6.0",
+    "react-native-reanimated": "^2.2.4",
+    "react-native-safe-area-context": "^4.3.3",
+    "react-native-screens": "^3.9.0",
+    "react-native-svg": "^13.0.0",
+    "react-native-web": "0.18.8",
+    "styled-components": "^5.3.3",
+    "styled-system": "^5.1.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@types/react": "~18.0.17",
+    "@types/react-native": "~0.69.5",
+    "prettier": "^2.4.1",
+    "typescript": "~4.8.2"
+  },
+  "private": true
+}
