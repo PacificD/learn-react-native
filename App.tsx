@@ -1,7 +1,7 @@
 /*
  * @Author: Pacific_D
  * @Date: 2022-08-28 18:53:45
- * @LastEditTime: 2022-10-19 16:37:10
+ * @LastEditTime: 2022-10-21 14:13:40
  * @LastEditors: Pacific_D
  * @Description:
  * @FilePath: \learn-react-native\App.tsx
@@ -23,7 +23,7 @@ const Drawer = createDrawerNavigator()
 export default function App() {
   return (
     <AppContainer>
-      <Drawer.Navigator initialRouteName="Loginboarding">
+      <Drawer.Navigator initialRouteName="HomeScreen">
         <Drawer.Screen name="Home" component={HomeScreen} />
         <Drawer.Screen name="DragAndSort" component={DragAndSortScreen} />
         <Drawer.Screen name="SwipeToDelete" component={SwipeToDeleteScreen} />
