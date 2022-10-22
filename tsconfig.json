@@ -24,7 +24,10 @@
         "src/screens"
       ],
       "@assets": [
-        "assets"
+        "src/assets"
+      ],
+      "@types": [
+        "src/types"
       ]
     }
   }

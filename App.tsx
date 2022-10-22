@@ -1,22 +1,23 @@
 /*
  * @Author: Pacific_D
  * @Date: 2022-08-28 18:53:45
- * @LastEditTime: 2022-10-21 14:13:40
+ * @LastEditTime: 2022-10-22 15:05:48
  * @LastEditors: Pacific_D
  * @Description:
  * @FilePath: \learn-react-native\App.tsx
  */
 import React from 'react'
-import { AppContainer } from './src/components'
 import { createDrawerNavigator } from '@react-navigation/drawer'
+import { AppContainer } from '@components'
 import {
   HomeScreen,
   DragAndSortScreen,
   SwipeToDeleteScreen,
   OnboardingScreen,
   LoginScreen,
-  RegisterScreen
-} from './src/screens'
+  RegisterScreen,
+  TwitterProfileScreen
+} from '@screens'
 
 const Drawer = createDrawerNavigator()
 
@@ -27,6 +28,7 @@ export default function App() {
         <Drawer.Screen name="Home" component={HomeScreen} />
         <Drawer.Screen name="DragAndSort" component={DragAndSortScreen} />
         <Drawer.Screen name="SwipeToDelete" component={SwipeToDeleteScreen} />
+        <Drawer.Screen name="TwitterProfile" component={TwitterProfileScreen} />
         <Drawer.Screen name="Loginboarding" component={OnboardingScreen} />
         <Drawer.Screen
           name="Login"

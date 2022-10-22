@@ -1,7 +1,7 @@
 /*
  * @Author: Pacific_D
  * @Date: 2022-08-29 21:27:11
- * @LastEditTime: 2022-10-19 16:37:08
+ * @LastEditTime: 2022-10-22 15:04:51
  * @LastEditors: Pacific_D
  * @Description:
  * @FilePath: \learn-react-native\src\screens\index.ts
@@ -12,3 +12,4 @@ export { default as SwipeToDeleteScreen } from './SwipeToDeleteScreen'
 export { default as OnboardingScreen } from './LoginScreen'
 export { default as LoginScreen } from './LoginScreen/Login'
 export { default as RegisterScreen } from './LoginScreen/Register'
+export { default as TwitterProfileScreen } from './TwitterProfileScreen'

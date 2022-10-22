@@ -1,7 +1,7 @@
 /*
  * @Author: Pacific_D
  * @Date: 2022-10-21 14:13:14
- * @LastEditTime: 2022-10-21 14:55:00
+ * @LastEditTime: 2022-10-22 16:16:17
  * @LastEditors: Pacific_D
  * @Description:
  * @FilePath: \learn-react-native\src\screens\HomeScreen\index.tsx
@@ -13,8 +13,16 @@ import { Ionicons } from '@expo/vector-icons'
 import BottomSheet from '@gorhom/bottom-sheet'
 import { DrawerScreenComponent } from '../../types'
 import { CustomButton } from '@components'
+import InterpolateColors from './InterpolateColors'
+
+const PROMPTS = [
+  'Hello world!',
+  'In the pipe, five by five!',
+  'Life is simple Code.'
+]
 
 const HomeScreen = ({ navigation }: DrawerScreenComponent) => {
+  // bottomSheet
   const bottomSheetRef = useRef<BottomSheet>(null),
     snapPoints = useMemo(() => ['25%', '50%', '85%'], []),
     handleSheetChanges = useCallback((index: number) => {
@@ -22,24 +30,25 @@ const HomeScreen = ({ navigation }: DrawerScreenComponent) => {
     }, []),
     handleClosePress = useCallback(() => bottomSheetRef.current?.collapse(), [])
 
+  // async storage
   const [value, setValue] = useState('HAHA'),
     { getItem, setItem } = useAsyncStorage('@storage_key')
   const readItemFromStorage = async () => {
-    const item = await getItem()
-    setValue(item!)
-  }
-
-  const writeItemToStorage = async (newValue: string) => {
-    await setItem(newValue)
-    setValue(newValue)
-  }
+      const item = await getItem()
+      setValue(item!)
+    },
+    writeItemToStorage = async (newValue: string) => {
+      await setItem(newValue)
+      setValue(newValue)
+    }
 
   useEffect(() => {
     readItemFromStorage()
   }, [])
 
   return (
-    <View flex={1} paddingY={24} backgroundColor="gray">
+    <View flex={1}>
+      <InterpolateColors />
       <BottomSheet
         ref={bottomSheetRef}
         index={1}
