@@ -1,7 +1,7 @@
 /*
  * @Author: Pacific_D
  * @Date: 2022-08-28 18:53:45
- * @LastEditTime: 2022-10-22 15:05:48
+ * @LastEditTime: 2022-10-22 18:09:23
  * @LastEditors: Pacific_D
  * @Description:
  * @FilePath: \learn-react-native\App.tsx
@@ -16,7 +16,8 @@ import {
   OnboardingScreen,
   LoginScreen,
   RegisterScreen,
-  TwitterProfileScreen
+  TwitterProfileScreen,
+  ReanimatedScreen
 } from '@screens'
 
 const Drawer = createDrawerNavigator()
@@ -24,11 +25,12 @@ const Drawer = createDrawerNavigator()
 export default function App() {
   return (
     <AppContainer>
-      <Drawer.Navigator initialRouteName="HomeScreen">
+      <Drawer.Navigator initialRouteName="Reanimated">
         <Drawer.Screen name="Home" component={HomeScreen} />
         <Drawer.Screen name="DragAndSort" component={DragAndSortScreen} />
         <Drawer.Screen name="SwipeToDelete" component={SwipeToDeleteScreen} />
         <Drawer.Screen name="TwitterProfile" component={TwitterProfileScreen} />
+        <Drawer.Screen name="Reanimated" component={ReanimatedScreen} />
         <Drawer.Screen name="Loginboarding" component={OnboardingScreen} />
         <Drawer.Screen
           name="Login"
